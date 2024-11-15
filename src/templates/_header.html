@@ -1,3 +1,51 @@
-<header class="header @@if(this.mod){header_@@mod}">
-  
+<header class="header @@if(this.mod){header_@@mod}" data-scroll-lock-fill-gap>
+	<div class="header__inner container">
+		<a class="header__logo header__logo_mobile" href="./"><img src="./images/logo.svg" alt=""></a>
+		<div class="header__navi">
+			<button class="header__close"><svg><use xlink:href="#icon-close"></use></svg></button>
+			<div class="header__menu" data-scroll-lock-scrollable>
+				<a class="header__menu-logo" href="./"><img src="./images/logo.svg" alt=""></a>
+				<div class="header__menu-links">
+					<a class="header__menu-link" href="./catalog.html">Каталог</a>
+					<a class="header__menu-link header__menu-link_mobile" href="./cart.html">Корзина (<span>2</span>)</a>
+					<a class="header__menu-link" href="./compare.html">Сравнение</a>
+					<a class="header__menu-link" href="./favorites.html">Избранное</a>
+					<a class="header__menu-link" href="./about.html">О компании</a>
+					<a class="header__menu-link" href="./contacts.html">Контакты</a>
+					<a class="header__menu-link header__menu-link_mobile" href="./account.html">Аккаунт</a>
+				</div>
+				<div class="header__menu-util">
+					<form action="./" class="header__menu-search search">
+						<div class="search__inner">
+							<input type="text" value="">
+							<input type="submit" value="">
+						</div>
+					</form>
+					<a class="header__menu-user" href="./login.html"><svg><use xlink:href="#icon-user"></use></svg></a>
+					<a class="header__menu-cart" href="./cart.html" data-count="2"><svg><use xlink:href="#icon-cart"></use></svg></a>
+					<!-- <a class="header__menu-exit" href="./"><svg><use xlink:href="#icon-exit"></use></svg></a> -->
+				</div>
+			</div>
+		</div>
+		<button class="header__toggle"><svg><use xlink:href="#icon-menu"></use></svg></button>
+	</div>
 </header>
+
+<div class="categories">
+	<div class="categories__inner container">
+		<div class="categories__slider swiper">
+			<div class="swiper-wrapper">
+				<a class="categories__link swiper-slide" href="./">Телефоны и гаджеты</a>
+				<a class="categories__link swiper-slide" href="./">Стиральные машины</a>
+				<a class="categories__link swiper-slide" href="./">Микроволновые печи</a>
+				<a class="categories__link swiper-slide" href="./">Телевизоры</a>
+				<a class="categories__link swiper-slide" href="./">Холодильники</a>
+				<a class="categories__link swiper-slide" href="./">Проекторы</a>
+				<a class="categories__link swiper-slide" href="./">Пылесосы</a>
+				<a class="categories__link swiper-slide" href="./">Компьютеры</a>
+			</div>
+		</div>
+		<button class="categories__button categories__button_prev"></button>
+		<button class="categories__button categories__button_next"></button>
+	</div>
+</div>

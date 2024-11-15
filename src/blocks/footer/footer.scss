@@ -1,0 +1,99 @@
+.footer {
+	$self: &;
+	padding: 40px 0;
+	background-color: #eee;
+
+	&__inner {
+
+	}
+
+	&__logo {
+		display: block;
+		margin: 0 auto 30px;
+		width: fit-content;
+		
+		@include media('<=xs') {
+			max-width: 120px;
+			margin: 0 0 30px;
+		}
+	}
+
+	&__menu {
+		margin: 0 auto 30px;
+		display: flex;
+		justify-content: space-between;
+		max-width: 800px;
+		font-weight: 600;
+		font-size: 17px;
+		gap: 20px;
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+			font-size: 15px;
+		}
+
+		a {
+			text-decoration: none;
+			color: rgb(var(--accent));
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+			gap: 30px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 200px;
+		width: 100%;
+		
+		@include media('<=sm') {
+			
+		}
+		
+		@include media('<=xxs') {
+			max-width: 170px;
+			margin: 0;
+		}
+		
+		a {
+			display: block;
+			height: 32px;
+			width: 32px;
+			
+			@include media('<=xxs') {
+				height: 28px;
+				width: 28px;
+			}
+				
+			svg {
+				fill: rgb(var(--accent));
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+	
+	&__address {
+		line-height: 1.4;
+
+		@include media('<=xs') {
+			font-size: 15px;
+		}
+		
+		a {
+			display: block;
+			text-decoration: none;
+			color: #444;
+		}
+	}
+}
