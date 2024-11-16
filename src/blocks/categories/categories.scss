@@ -1,6 +1,10 @@
 .categories {
 	$self: &;
-	padding: 0 10px;
+	margin-bottom: 25px;
+	
+	@include media('<=sm') {
+		margin-bottom: 20px;
+	}
 
 	@include media('<=xxs') {
 		display: none;
@@ -8,11 +12,11 @@
 
 	&__inner {
 		box-sizing: border-box;
-		padding: 0 40px;
+		padding: 0 50px;
 		position: relative;
-
-		&.container {
-			max-width: 1100px;
+		
+		@include media('<=sm') {
+			padding: 0 35px;
 		}
 	}
 
@@ -21,16 +25,18 @@
 	}
 
 	&__link {
+		box-sizing: border-box;
 		width: fit-content;
 		font-size: 16px;
 		text-decoration: none;
-		color: #1f519d;
+		color: #888;
 		transition: color 0.3s;
+		line-height: 1;
 		
 		@include media('<=sm') {
 			font-size: 14px;
 		}
-
+		
 		&:hover {
 			color: rgb(var(--accent));
 		}
@@ -45,16 +51,18 @@
 		width: 29px;
 		height: 29px;
 		flex-shrink: 0;
-		border-radius: 100%;
-		background-color: rgb(var(--accent));
-		color: #fff;
+		border-radius: 5px;
+		background-color: #fff;
+		// border: 1px solid rgba(var(--accent), 0.5);
+		transition: background-color 0.3s, border-color 0.3s;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		
 		@include media('<=sm') {
-			width: 22px;
-			height: 22px;
+			width: 24px;
+			height: 24px;
 		}
 	
 		&::before {
@@ -62,23 +70,28 @@
 			content: '';
 			width: 30%;
 			height: 45%;
-			background: svg-url('<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.70711 6.29289C8.09763 6.68342 8.09763 7.31658 7.70711 7.70711L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="white"/></svg>') no-repeat center / contain transparent;
+			background: svg-url('<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.70711 6.29289C8.09763 6.68342 8.09763 7.31658 7.70711 7.70711L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#085ddc"/></svg>') no-repeat center / contain transparent;
 		}
 
 		&_prev {
-			left: 0;
-
+			left: 0px;
+	
 			&::before {
 				transform: rotate(180deg);
 			}
 		}
 
 		&_next {
-			right: 0;
+			right: 0px;
 		}
 
 		&.disabled {
-			background-color: #aaa;
+			// background-color: rgba(var(--accent), 0.3);
+			border-color: transparent;
+
+			&::before {
+				filter: grayscale(1.0) brightness(1.8);
+			}
 		}
 	}
 }

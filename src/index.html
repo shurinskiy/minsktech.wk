@@ -1,6 +1,142 @@
 @@include("_head.html", {"id":"home"}) 
 @@include("_header.html") 
 
+@@include("_categories.html") 
 
+<section class="hero mb2">
+	<div class="hero__inner container">
+		<div class="hero__slider swiper">
+			<div class="swiper-wrapper">
+				<div class="hero__slide swiper-slide" href="./">
+					<img src="./images/hero-image-4.webp" alt="">
+					<div class="hero__content">
+						<div class="hero__type">СКИДКИ</div>
+						<h2 class="hero__title">Мощь и элегантность</h2>
+						<div class="hero__own">Компьютеры и периферия</div>
+						<a class="hero__order" href="./detail.html">Заказать сейчас!</a>
+					</div>
+				</div>
+				<div class="hero__slide swiper-slide" href="./">
+					<img src="./images/hero-image-1.webp" alt="">
+					<div class="hero__content">
+						<div class="hero__type">NEWS</div>
+						<h2 class="hero__title">Пылесосы SGJA0</h2>
+						<div class="hero__own">Тихая уборка на новом уровне</div>
+						<a class="hero__order" href="./detail.html">Заказать сейчас!</a>
+					</div>
+				</div>
+				<div class="hero__slide swiper-slide" href="./">
+					<img src="./images/hero-image-2.webp" alt="">
+					<div class="hero__content">
+						<div class="hero__type">СКИДКИ до 10%</div>
+						<h2 class="hero__title">Кухонная техника Celius</h2>
+						<div class="hero__own">Закажи и забери сегодня!</div>
+						<a class="hero__order" href="./detail.html">Заказать сейчас!</a>
+					</div>
+				</div>
+				<div class="hero__slide swiper-slide" href="./">
+					<img src="./images/hero-image-3.webp" alt="">
+					<div class="hero__content">
+						<div class="hero__type">PRESENT</div>
+						<h2 class="hero__title">Климатическая техника</h2>
+						<div class="hero__own">Обновлённая серия</div>
+						<a class="hero__order" href="./detail.html">Заказать сейчас!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="hero__button hero__button_prev"></button>
+		<button class="hero__button hero__button_next"></button>
+	</div>
+</section>
+
+<section class="slider mb2">
+	<div class="slider__inner container">
+		<h2 class="slider__title title mb3">Новинки</h2>
+		<div class="slider__items swiper">
+			<div class="swiper-wrapper">
+				<div class="slider__item swiper-slide card">
+					<div class="card__image">
+						<img src="./images/card-image-1.webp" alt="">
+						<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
+						<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-compare"></use></svg></button>
+					</div>
+					<div class="card__body">
+						<div class="card__price">
+							<span>1000p.</span>
+							<span>1300p.</span>
+						</div>
+						<div class="card__title">Кофемашина HD8654/59</div>
+						<a class="card__button" href="./">В корзину</a>
+					</div>
+				</div>
+				<div class="slider__item swiper-slide card">
+					<div class="card__image">
+						<img src="./images/card-image-2.webp" alt="">
+						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
+						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
+					</div>
+					<div class="card__body">
+						<div class="card__price">
+							<span>1000p.</span>
+							<span>1300p.</span>
+						</div>
+						<div class="card__title">Кухонный комбайн K6552</div>
+						<a class="card__button" href="./">В корзину</a>
+					</div>
+				</div>
+				<div class="slider__item swiper-slide card">
+					<div class="card__image">
+						<img src="./images/card-image-3.webp" alt="">
+						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
+						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
+					</div>
+					<div class="card__body">
+						<div class="card__price">
+							<span>1000p.</span>
+							<span>1300p.</span>
+						</div>
+						<div class="card__title">Компьютер офисный II X2 270</div>
+						<a class="card__button" href="./">В корзину</a>
+					</div>
+				</div>
+				<div class="slider__item swiper-slide card">
+					<div class="card__image">
+						<img src="./images/card-image-4.webp" alt="">
+						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
+						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
+					</div>
+					<div class="card__body">
+						<div class="card__price">
+							<span>1000p.</span>
+							<span>1300p.</span>
+						</div>
+						<div class="card__title">Кухонный комбайн B52452</div>
+						<a class="card__button" href="./">В корзину</a>
+					</div>
+				</div>
+				<div class="slider__item swiper-slide card">
+					<div class="card__image">
+						<img src="./images/card-image-5.webp" alt="">
+						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
+						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
+					</div>
+					<div class="card__body">
+						<div class="card__price">
+							<span>1000p.</span>
+							<span>1300p.</span>
+						</div>
+						<div class="card__title">ROR-C11-2200M</div>
+						<a class="card__button" href="./">В корзину</a>
+					</div>
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
 
 @@include("_bottom.html")

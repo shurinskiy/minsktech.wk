@@ -1,0 +1,163 @@
+.card {
+	$self: &;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 15px;
+	position: relative;
+
+	/* &[data-top]::before {
+		display: block;
+		box-sizing: border-box;
+		content: attr(data-top);
+		background-color: rgb(var(--accent));
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 15px;
+		color: #fff;
+		padding: 2px;
+		width: 40px;
+		height: 26px;
+		font-weight: 700;
+		// border-radius: 0 0 4px 4px;
+		font-size: 10px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&[data-new]::after {
+		display: block;
+		box-sizing: border-box;
+		content: attr(data-new);
+		background-color: #FFAE00;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 65px;
+		color: #fff;
+		padding: 2px;
+		width: 40px;
+		height: 26px;
+		font-weight: 700;
+		// border-radius: 0 0 4px 4px;
+		font-size: 10px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	} */
+
+	&__fav {
+		@extend %reset-button;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		z-index: 1;
+		right: 5px;
+		top: 5px;
+		
+		svg {
+			fill: transparent;
+			stroke-width: 2;
+			stroke: #bbb;
+			width: 100%;
+			height: 100%;
+			transition: stroke 0.2s, fill 0.2s;
+		}
+		
+		&_set svg {
+			stroke: #DE0A30;
+			fill: #DE0A30;
+		}
+	}
+
+	&__compare {
+		@extend %reset-button;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		z-index: 1;
+		left: 5px;
+		top: 5px;
+		
+		svg {
+			fill: #bbb;
+			width: 100%;
+			height: 100%;
+			transition: fill 0.2s;
+		}
+		
+		&_set svg {
+			// fill: rgb(var(--accent));
+			fill: #FFAE00;
+		}
+	}
+
+	&__image {
+		margin-bottom: 20px;
+		position: relative;
+		
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__price {
+		margin-bottom: 15px;
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		span {
+			
+			&:nth-child(1) {
+				font-weight: 600;
+			}
+			
+			&:nth-child(2) {
+				text-decoration: line-through;
+				color: #aaa;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		@extend %reset-button;
+		background-color: rgb(var(--accent));
+		display: block;
+		color: #fff;
+		font-size: 15px;
+		padding: 12px 20px;
+		border-radius: 4px;
+		text-align: center;
+		margin-top: auto;
+	}
+}
