@@ -3,7 +3,7 @@
 
 @@include("_categories.html") 
 
-<section class="hero mb2">
+<section class="hero mb1">
 	<div class="hero__inner container">
 		<div class="hero__slider swiper">
 			<div class="swiper-wrapper">
@@ -50,85 +50,177 @@
 	</div>
 </section>
 
-<section class="slider mb2">
+<section class="slider mb1">
 	<div class="slider__inner container">
-		<h2 class="slider__title title mb3">Новинки</h2>
-		<div class="slider__items swiper">
-			<div class="swiper-wrapper">
-				<div class="slider__item swiper-slide card">
-					<div class="card__image">
-						<img src="./images/card-image-1.webp" alt="">
-						<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
-						<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-compare"></use></svg></button>
-					</div>
-					<div class="card__body">
-						<div class="card__price">
-							<span>1000p.</span>
-							<span>1300p.</span>
-						</div>
-						<div class="card__title">Кофемашина HD8654/59</div>
-						<a class="card__button" href="./">В корзину</a>
-					</div>
+		<h2 class="slider__title title mb2">Новинки</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кофемашина HD8654/59',
+						image: 'card-image-1.webp',
+						discount: '1800р.',
+						price: '1200р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн K6552',
+						image: 'card-image-2.webp',
+						discount: '1000р.',
+						price: '1300р.',
+						fav_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Компьютер офисный II X2 270',
+						image: 'card-image-3.webp',
+						discount: '900р.',
+						price: '1100р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн B52452',
+						image: 'card-image-4.webp',
+						discount: '1100р.',
+						price: '1300р.',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'ROR-C11-2200M',
+						image: 'card-image-5.webp',
+						discount: '1400р.',
+						price: '1700р.',
+					})
 				</div>
-				<div class="slider__item swiper-slide card">
-					<div class="card__image">
-						<img src="./images/card-image-2.webp" alt="">
-						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
-						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
-					</div>
-					<div class="card__body">
-						<div class="card__price">
-							<span>1000p.</span>
-							<span>1300p.</span>
-						</div>
-						<div class="card__title">Кухонный комбайн K6552</div>
-						<a class="card__button" href="./">В корзину</a>
-					</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="brands mb1">
+	<div class="brands__inner container">
+		<h2 class="brands__title title mb2">Топовые бренды</h2>
+		<div class="brands__slider">
+			<div class="brands__items swiper">
+				<div class="swiper-wrapper">
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-electrolux.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-franke.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-gorenje.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-kaiser.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-neff.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-samsung.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-smeg.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-teka.svg" alt=""></a>
+					<a class="brands__item swiper-slide" href="./"><img src="./images/brand-toshiba.svg" alt=""></a>
 				</div>
-				<div class="slider__item swiper-slide card">
-					<div class="card__image">
-						<img src="./images/card-image-3.webp" alt="">
-						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
-						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
-					</div>
-					<div class="card__body">
-						<div class="card__price">
-							<span>1000p.</span>
-							<span>1300p.</span>
-						</div>
-						<div class="card__title">Компьютер офисный II X2 270</div>
-						<a class="card__button" href="./">В корзину</a>
-					</div>
+				<div class="brands__navi">
+					<button class="brands__button brands__button_prev"></button>
+					<button class="brands__button brands__button_next"></button>
 				</div>
-				<div class="slider__item swiper-slide card">
-					<div class="card__image">
-						<img src="./images/card-image-4.webp" alt="">
-						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
-						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
-					</div>
-					<div class="card__body">
-						<div class="card__price">
-							<span>1000p.</span>
-							<span>1300p.</span>
-						</div>
-						<div class="card__title">Кухонный комбайн B52452</div>
-						<a class="card__button" href="./">В корзину</a>
-					</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title mb2">Популярные товары</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кофемашина HD8654/59',
+						image: 'card-image-6.webp',
+						discount: '1800р.',
+						price: '1200р.',
+						fav_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн K6552',
+						image: 'card-image-7.webp',
+						discount: '1000р.',
+						price: '1300р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Компьютер офисный II X2 270',
+						image: 'card-image-8.webp',
+						discount: '900р.',
+						price: '1100р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн B52452',
+						image: 'card-image-9.webp',
+						discount: '1100р.',
+						price: '1300р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'ROR-C11-2200M',
+						image: 'card-image-5.webp',
+						discount: '1400р.',
+						price: '1700р.',
+					})
 				</div>
-				<div class="slider__item swiper-slide card">
-					<div class="card__image">
-						<img src="./images/card-image-5.webp" alt="">
-						<button class="card__fav"><svg><use xlink:href="#icon-heart"></use></svg></button>
-						<button class="card__compare"><svg><use xlink:href="#icon-compare"></use></svg></button>
-					</div>
-					<div class="card__body">
-						<div class="card__price">
-							<span>1000p.</span>
-							<span>1300p.</span>
-						</div>
-						<div class="card__title">ROR-C11-2200M</div>
-						<a class="card__button" href="./">В корзину</a>
-					</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title mb2">Последние отзывы</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-1.webp',
+						name: 'Тихомиров Михаил',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.8
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-2.webp',
+						name: 'Васильев Владислав',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.4
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-3.webp',
+						name: 'Петров Иван',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 4.6
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-4.webp',
+						name: 'Мария Захарова',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 4.8
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-5.webp',
+						name: 'Светличная Светлана',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.5
+					})
 				</div>
 			</div>
 			<div class="slider__navi">

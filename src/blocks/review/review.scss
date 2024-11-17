@@ -1,0 +1,41 @@
+.review {
+	$self: &;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px 15px 15px;
+	
+	&__image {
+		border: 1px solid #bbb;
+		border-radius: 1000px;
+		margin: 0 auto 20px;
+		overflow: hidden;
+		height: 120px;
+		width: 120px;
+
+		img {
+			object-fit: cover;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__name {
+		text-align: center;
+		font-weight: 600;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	&__rating {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		font-weight: 300;
+		line-height: 1.4;
+		font-size: 13px;
+	}
+}

@@ -1,4 +1,4 @@
-.slider {
+.brands {
 	$self: &;
 
 	&__inner {
@@ -9,7 +9,7 @@
 
 	}
 
-	&__wrapper {
+	&__slider {
 		position: relative;
 	}
 
@@ -19,6 +19,21 @@
 
 	&__item {
 		height: auto;
+		display: flex;
+		max-width: fit-content;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+		background-color: #fff;
+		border-radius: 10px;
+			padding: 10px;
+
+		img {
+			display: block;
+			max-height: 100px;
+			max-width: 200px;
+			width: 100%;
+		}
 	}
 
 	&__navi {
@@ -36,10 +51,9 @@
 		height: 40px;
 		flex-shrink: 0;
 		border-radius: 5px;
-		// background-color: rgb(var(--accent));
-		background-color: rgba(210, 210, 210, 0.9);
 		transform: translateY(-50%);
 		transition: background-color 0.3s;
+		background-color: rgba(210, 210, 210, 0.9);
 		display: flex;
 		align-items: center;
 		justify-content: center;

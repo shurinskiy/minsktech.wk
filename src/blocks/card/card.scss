@@ -6,6 +6,8 @@
 	border-radius: 10px;
 	padding: 15px;
 	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
 
 	/* &[data-top]::before {
 		display: block;
@@ -87,8 +89,8 @@
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
-		width: 30px;
-		height: 30px;
+		width: 26px;
+		height: 26px;
 		position: absolute;
 		z-index: 1;
 		left: 5px;
@@ -102,8 +104,8 @@
 		}
 		
 		&_set svg {
-			// fill: rgb(var(--accent));
-			fill: #FFAE00;
+			fill: rgb(var(--accent));
+			// fill: #FFAE00;
 		}
 	}
 
@@ -123,6 +125,7 @@
 	&__body {
 		display: flex;
 		flex-flow: column nowrap;
+		flex-grow: 1;
 	}
 
 	&__price {
