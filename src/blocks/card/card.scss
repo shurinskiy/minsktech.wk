@@ -112,6 +112,7 @@
 	&__image {
 		margin-bottom: 20px;
 		position: relative;
+		text-decoration: none;
 		
 		&::after {
 			display: block;
@@ -119,6 +120,10 @@
 			position: absolute;
 			inset: 0;
 			background-color: rgba(0, 0, 0, 0.03);
+		}
+
+		img {
+			display: block;
 		}
 	}
 

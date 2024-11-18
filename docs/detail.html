@@ -40,7 +40,7 @@
 		<button class="header__toggle"><svg><use xlink:href="#icon-menu"></use></svg></button>
 	</div>
 </header> 
-<div class="categories ">
+<div class="categories mb2">
 	<div class="categories__inner container">
 		<div class="categories__slider swiper">
 			<div class="swiper-wrapper">
@@ -61,111 +61,86 @@
 </div>
  
 
-<main class="catalog mb1">
-	<div class="catalog__inner container">
-		<div class="catalog__top mb3">
-			<h2>Фильтр по параметрам</h2>
-			<a class="catalog__add button button_dark" href="./add.html">Добавить товар</a>
+<main class="detail">
+	<div class="detail__inner container">
+		<div class="detail__gallery d-gallery mb1">
+			<img 
+				src="./images/detail-image-2.webp" 
+				data-src="./images/detail-image-2-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-1.webp" 
+				data-src="./images/detail-image-1-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-3.webp" 
+				data-src="./images/detail-image-3-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-4.webp" 
+				data-src="./images/detail-image-4-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-5.webp" 
+				data-src="./images/detail-image-5-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
 		</div>
-		<div class="catalog__content">
-			<aside class="catalog__aside">
-	<button class="catalog__aside-toggle"></button>
-	<button class="catalog__aside-close"><svg><use xlink:href="#icon-close"></use></svg></button>
-	<form class="catalog__filters" action="./" data-scroll-lock-scrollable>
-		<div class="catalog__filter filter" id="filter-price">
-			<h3 class="filter__title">Цена</h3>
-			<fieldset class="filter__body">
-				<div 
-					class="filter__range" 
-					data-range-start-min="20000" 
-					data-range-start-max="80000" 
-					data-range-max="100000"
-					data-range-step="1000"
-					data-range-gap="20000"
-				>
-					<input type="range">
-					<input type="range">
+		<div class="detail__side mb1">
+			<h1 class="detail__title">Стиральная машина ATLANT СМА 60У1214-01</h1>
+			<div class="detail__price">2310 р.</div>
+			<div class="detail__props">
+				<div class="detail__prop">
+					<span>Бренд:</span>
+					<span>Atlant</span>
 				</div>
-			</fieldset>
+				<div class="detail__prop">
+					<span>Год выхода:</span>
+					<span>2021</span>
+				</div>
+				<div class="detail__prop">
+					<span>Тип мотора:</span>
+					<span>Коллекторный</span>
+				</div>
+				<div class="detail__prop">
+					<span>Вес загрузки:</span>
+					<span>7 кг</span>
+				</div>
+				<div class="detail__prop">
+					<span>Дисплей:</span>
+					<span>Сенсорный</span>
+				</div>
+			</div>
+			<div class="detail__buttons">
+				<a class="detail__order button" href="./">В корзину</a>
+				<button class="detail__compare"><svg><use xlink:href="#icon-match"></use></svg></button>
+				<button class="detail__favorite"><svg><use xlink:href="#icon-heart"></use></svg></button>
+			</div>
 		</div>
-		<div class="catalog__filter filter" id="filter-brand">
-			<h3 class="filter__title">Бренд</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Atlant</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>LG</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Gefest</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-deep">
-			<h3 class="filter__title">Глубина, см</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>30-40</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>40-50</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>50+</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-speed">
-			<h3 class="filter__title">Скорость (до)</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>800</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1000</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1100</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1200</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1300</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-fuel">
-			<h3 class="filter__title">Тип топлива</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Бензин</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Дизель</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Гибрид</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Электро</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-country">
-			<h3 class="filter__title">Страна</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Германия</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Франция</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Китай</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Россия</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Беларусь</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-width">
-			<h3 class="filter__title">Ширина, см</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>40-45</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>45-50</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>55-60</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>60-65</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>65-70</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-year">
-			<h3 class="filter__title">Год выхода</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2024</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2023</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2022</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2021</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-color">
-			<h3 class="filter__title">Цвет</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-			</fieldset>
-		</div>
-		<button class="catalog__apply button">Применить</button>
-	</form>
-</aside>
-			<div class="catalog__items">
-				<div class="catalog__item card">
+	</div>
+</main>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Похожие товары</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					<div class="slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-1.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -173,29 +148,29 @@
 	</a>
 	<div class="card__body">
 		<div class="card__price">
-			<span>18000</span>
-			
+			<span>1200р.</span>
+			<span>1800р.</span>
 		</div>
 		<div class="card__title">Кофемашина HD8654/59</div>
 		<a class="card__button" href="./">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+					<div class="slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-2.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
+		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
 		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
 	</a>
 	<div class="card__body">
 		<div class="card__price">
-			<span>19000</span>
-			
+			<span>1300р.</span>
+			<span>1000р.</span>
 		</div>
 		<div class="card__title">Кухонный комбайн K6552</div>
 		<a class="card__button" href="./">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+					<div class="slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-3.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -203,29 +178,29 @@
 	</a>
 	<div class="card__body">
 		<div class="card__price">
-			<span>15000</span>
-			
+			<span>1100р.</span>
+			<span>900р.</span>
 		</div>
 		<div class="card__title">Компьютер офисный II X2 270</div>
 		<a class="card__button" href="./">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+					<div class="slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-4.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
+		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
 	</a>
 	<div class="card__body">
 		<div class="card__price">
-			<span>30000</span>
-			
+			<span>1300р.</span>
+			<span>1100р.</span>
 		</div>
 		<div class="card__title">Кухонный комбайн B52452</div>
 		<a class="card__button" href="./">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+					<div class="slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-5.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -233,83 +208,99 @@
 	</a>
 	<div class="card__body">
 		<div class="card__price">
-			<span>50000</span>
-			
+			<span>1700р.</span>
+			<span>1400р.</span>
 		</div>
 		<div class="card__title">ROR-C11-2200M</div>
 		<a class="card__button" href="./">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-6.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>43000</span>
-			
-		</div>
-		<div class="card__title">Чайник электрический КТ-659-1</div>
-		<a class="card__button" href="./">В корзину</a>
-	</div>
-</div>
-				<div class="catalog__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-7.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>18000</span>
-			
-		</div>
-		<div class="card__title">Полочная акустика Rebel</div>
-		<a class="card__button" href="./">В корзину</a>
-	</div>
-</div>
-				<div class="catalog__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-8.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>20000</span>
-			
-		</div>
-		<div class="card__title">Посудомоечная машина CDCP 6/E-07</div>
-		<a class="card__button" href="./">В корзину</a>
-	</div>
-</div>
-				<div class="catalog__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-9.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare "><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>23000</span>
-			
-		</div>
-		<div class="card__title">Мультиварка MT-1964</div>
-		<a class="card__button" href="./">В корзину</a>
-	</div>
-</div>
-				<div class="catalog__pagination pagination">
-	<a class="pagination__link active" href="./">1</a>
-	<a class="pagination__link" href="./">2</a>
-	<a class="pagination__link" href="./">3</a>
-	<a class="pagination__link" href="./">4</a>
-</div>
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
 			</div>
 		</div>
 	</div>
-</main>
+</section>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Отзывы от товаре</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					<div class="slider__item swiper-slide review">
+	<div class="review__image"><img src="./images/review-image-1.webp" alt=""></div>
+	<div class="review__name">Тихомиров Михаил</div>
+	<div class="review__rating rating" data-rate="3.8">
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+</div>
+	<div class="review__text">Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.</div>
+</div>
+					<div class="slider__item swiper-slide review">
+	<div class="review__image"><img src="./images/review-image-2.webp" alt=""></div>
+	<div class="review__name">Васильев Владислав</div>
+	<div class="review__rating rating" data-rate="3.4">
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+</div>
+	<div class="review__text">Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.</div>
+</div>
+					<div class="slider__item swiper-slide review">
+	<div class="review__image"><img src="./images/review-image-3.webp" alt=""></div>
+	<div class="review__name">Петров Иван</div>
+	<div class="review__rating rating" data-rate="4.6">
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+</div>
+	<div class="review__text">Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.</div>
+</div>
+					<div class="slider__item swiper-slide review">
+	<div class="review__image"><img src="./images/review-image-4.webp" alt=""></div>
+	<div class="review__name">Мария Захарова</div>
+	<div class="review__rating rating" data-rate="4.8">
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+</div>
+	<div class="review__text">Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.</div>
+</div>
+					<div class="slider__item swiper-slide review">
+	<div class="review__image"><img src="./images/review-image-5.webp" alt=""></div>
+	<div class="review__name">Светличная Светлана</div>
+	<div class="review__rating rating" data-rate="3.5">
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+	<svg class="rating__star"><use xlink:href="#icon-star"></use></svg>
+</div>
+	<div class="review__text">Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.</div>
+</div>
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
 <footer class="footer"> 
 	<div class="footer__inner container">
 		<a class="footer__logo" href="./"><img src="./images/logo.svg" alt=""></a>

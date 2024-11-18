@@ -1,0 +1,182 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", { cls: 'mb2' }) 
+
+<main class="detail">
+	<div class="detail__inner container">
+		<div class="detail__gallery d-gallery mb1">
+			<img 
+				src="./images/detail-image-2.webp" 
+				data-src="./images/detail-image-2-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-1.webp" 
+				data-src="./images/detail-image-1-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-3.webp" 
+				data-src="./images/detail-image-3-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-4.webp" 
+				data-src="./images/detail-image-4-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+			<img 
+				src="./images/detail-image-5.webp" 
+				data-src="./images/detail-image-5-large.webp"
+				data-fancybox="detail"
+				loading="lazy" 
+				alt="" 
+			>
+		</div>
+		<div class="detail__side mb1">
+			<h1 class="detail__title">Стиральная машина ATLANT СМА 60У1214-01</h1>
+			<div class="detail__price">2310 р.</div>
+			<div class="detail__props">
+				<div class="detail__prop">
+					<span>Бренд:</span>
+					<span>Atlant</span>
+				</div>
+				<div class="detail__prop">
+					<span>Год выхода:</span>
+					<span>2021</span>
+				</div>
+				<div class="detail__prop">
+					<span>Тип мотора:</span>
+					<span>Коллекторный</span>
+				</div>
+				<div class="detail__prop">
+					<span>Вес загрузки:</span>
+					<span>7 кг</span>
+				</div>
+				<div class="detail__prop">
+					<span>Дисплей:</span>
+					<span>Сенсорный</span>
+				</div>
+			</div>
+			<div class="detail__buttons">
+				<a class="detail__order button" href="./">В корзину</a>
+				<button class="detail__compare"><svg><use xlink:href="#icon-match"></use></svg></button>
+				<button class="detail__favorite"><svg><use xlink:href="#icon-heart"></use></svg></button>
+			</div>
+		</div>
+	</div>
+</main>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Похожие товары</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кофемашина HD8654/59',
+						image: 'card-image-1.webp',
+						discount: '1800р.',
+						price: '1200р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн K6552',
+						image: 'card-image-2.webp',
+						discount: '1000р.',
+						price: '1300р.',
+						fav_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Компьютер офисный II X2 270',
+						image: 'card-image-3.webp',
+						discount: '900р.',
+						price: '1100р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн B52452',
+						image: 'card-image-4.webp',
+						discount: '1100р.',
+						price: '1300р.',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'ROR-C11-2200M',
+						image: 'card-image-5.webp',
+						discount: '1400р.',
+						price: '1700р.',
+					})
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Отзывы от товаре</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-1.webp',
+						name: 'Тихомиров Михаил',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.8
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-2.webp',
+						name: 'Васильев Владислав',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.4
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-3.webp',
+						name: 'Петров Иван',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 4.6
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-4.webp',
+						name: 'Мария Захарова',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 4.8
+					})
+					@@include("_review.html", {
+						cls: 'slider__item swiper-slide',
+						image: 'review-image-5.webp',
+						name: 'Светличная Светлана',
+						text: 'Eum ullam aliquid quaerat velit voluptatibus excepturi consequatur natus exercitationem odio. Animi autem assumenda, ut maxime, dolores fuga aut provident inventore quo illo voluptatum exercitationem, doloremque sunt facilis consequatur laudantium quos.',
+						rate: 3.5
+					})
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

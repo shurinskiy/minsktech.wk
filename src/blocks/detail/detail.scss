@@ -1,0 +1,149 @@
+.detail {
+	$self: &;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+		
+		@include media('<=sm') {
+			grid-gap: 0;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__gallery {
+
+		@include media('<=sm') {
+			order: 1;
+		}
+	}
+
+	&__side {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 36px;
+		@include range(36px, 24px, 1280px, 360px);
+	}
+	
+	&__price {
+		margin-bottom: 35px;
+		font-weight: 600;
+		font-size: 32px;
+		@include range(32px, 26px, 1280px, 360px);
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__order {
+		margin-right: auto;
+		width: 100%;
+		max-width: 220px;
+
+		&.button {
+			height: 55px;
+			font-size: 20px;
+			
+			@include media('<=xxs') {
+				height: 50px;
+				font-size: 18px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 45px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__favorite {
+		@extend %reset-button;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		width: 36px;
+		height: 36px;
+		flex-shrink: 0;
+
+		@include media('<=xxs') {
+			width: 30px;
+			height: 30px;
+		}
+		
+		svg {
+			fill: transparent;
+			stroke-width: 2;
+			stroke: rgb(var(--accent));
+			width: 100%;
+			height: 100%;
+			transition: stroke 0.2s, fill 0.2s;
+		}
+		
+		&_set svg {
+			stroke: #DE0A30;
+			fill: #DE0A30;
+		}
+	}
+	
+	&__compare {
+		@extend %reset-button;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		width: 36px;
+		height: 36px;
+		flex-shrink: 0;
+
+		@include media('<=xxs') {
+			width: 30px;
+			height: 30px;
+		}
+		
+		svg {
+			fill: rgb(var(--accent));
+			width: 100%;
+			height: 100%;
+			transition: fill 0.2s;
+		}
+		
+		&_set svg {
+			fill: rgb(var(--accent));
+		}
+	}
+
+	&__props {
+		margin-bottom: 40px;
+	}
+
+	&__prop {
+		padding: 10px;
+		display: flex;
+		gap: 20px;
+
+		&:nth-child(odd) {
+			background-color: #fff;
+		}
+
+		span {
+			&:nth-child(1) {
+				font-weight: 600;
+			}
+
+			&:nth-child(2) {
+				color: #888;
+			}
+		}
+	}
+}

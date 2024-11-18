@@ -14,7 +14,7 @@ import { Navigation } from 'swiper/modules';
 			},
 			on: {
 				beforeInit: function(el) {
-					item
+					item.parentNode
 					.querySelector('.slider__navi')
 					?.classList
 					.add(`slider__navi_${i}`);

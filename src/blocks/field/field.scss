@@ -1,0 +1,66 @@
+.field {
+	$self: &;
+
+	&__title {
+		display: block;
+		color: #888;
+		font-size: 18px;
+		margin-bottom: 8px;
+		
+		@include media('<=md') {
+			font-size: 16px;
+		}
+	}
+
+	&__box {
+		box-sizing: border-box;
+		transition: border-color 0.3s;
+		border: 1px solid #ddd;
+		background-color: #fff;
+		border-radius: 6px;
+		min-height: 65px;
+		font-size: 18px;
+		color: #111;
+		
+		@include media('<=md') {
+			min-height: 55px;
+			font-size: 16px;
+		}
+
+		&_text {
+			@extend %reset-input;
+			padding: 10px 20px;
+			width: 100%;
+
+			&:focus {
+				border-color: rgb(var(--accent));
+			}
+		}
+		
+		&_area {
+			@extend %reset-input;
+			min-height: 300px;
+			line-height: 1.3;
+			padding: 20px;
+			resize: none;
+			width: 100%;
+			
+			@include media('<=xs') {
+				min-height: 200px;
+			}
+
+			&:focus {
+				border-color: rgb(var(--accent));
+			}
+		}
+		
+		&.select {
+
+		}
+
+		&:is(:-webkit-autofill, :autofill) {
+			-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+			-webkit-text-fill-color: #111;
+		}
+	}
+}

@@ -53,7 +53,6 @@
 		flex-shrink: 0;
 		border-radius: 5px;
 		background-color: #fff;
-		// border: 1px solid rgba(var(--accent), 0.5);
 		transition: background-color 0.3s, border-color 0.3s;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 		display: flex;
@@ -86,7 +85,6 @@
 		}
 
 		&.disabled {
-			// background-color: rgba(var(--accent), 0.3);
 			border-color: transparent;
 
 			&::before {

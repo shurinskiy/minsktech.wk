@@ -1,0 +1,70 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", {cls: 'mb2'}) 
+
+<main class="add mb1">
+	<div class="add__inner container">
+		<h1 class="add__title title mb3">Добавить товар в каталог</h1>
+
+		<form class="add__content">
+			<div class="add__fields">
+				<div class="add__field field">
+					<label class="field__title">Название</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Категория товара</label>
+					<select class="field__box">
+						<option value="1">Стиральная машина</option>
+						<option value="2">Телевизор</option>
+						<option value="3">Холодильник</option>
+						<option value="4">Пылесос</option>
+						<option value="5">Микроволновая печь</option>
+						<option value="6">Компьютер</option>
+						<option value="7">Проектор</option>
+					</select>
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Цена</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Год</label>
+					<select class="field__box">
+						<option value="">2020</option>
+						<option value="">2021</option>
+						<option value="">2022</option>
+						<option value="">2023</option>
+						<option value="">2024</option>
+					</select>
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Вес загрузки</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Дисплей</label>
+					<select class="field__box">
+						<option value="">Сенсорный</option>
+						<option value="">Неактивный</option>
+					</select>
+				</div>
+			</div>
+			<div class="add__pictures pictures">
+				<div class="pictures__item pictures__item_add"></div>
+				<div class="pictures__item">
+					<img src="./images/detail-image-2.webp" alt="">
+				</div>
+				<div class="pictures__item">
+					<img src="./images/detail-image-6.webp" alt="">
+				</div>
+				<div class="pictures__item">
+					<img src="./images/detail-image-4.webp" alt="">
+				</div>
+			</div>
+			<button class="add__submit button">Добавить</button>
+		</form>
+	</div>
+</main>
+
+@@include("_bottom.html")
