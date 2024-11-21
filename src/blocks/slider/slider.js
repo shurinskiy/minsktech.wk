@@ -31,6 +31,10 @@ import { Navigation } from 'swiper/modules';
 					slidesPerView: 1.2
 				},
 				481: {
+					spaceBetween: 10,
+					slidesPerView: 2
+				},
+				640: {
 					spaceBetween: 20,
 					slidesPerView: 2
 				},

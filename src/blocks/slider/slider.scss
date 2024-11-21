@@ -44,13 +44,5 @@
 		&_next {
 			right: -15px;
 		}
-
-		&.disabled {
-			background-color: #ccc;
-
-			&::before {
-				filter: grayscale(10) brightness(10);
-			}
-		}
 	}
 }

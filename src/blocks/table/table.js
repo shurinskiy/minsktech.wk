@@ -31,11 +31,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 					slidesPerView: 2
 				},
 				780: {
-					spaceBetween: 20,
+					spaceBetween: 10,
 					slidesPerView: 2
 				},
 				1100: {
-					spaceBetween: 24,
+					spaceBetween: 10,
 					slidesPerView: 3
 				}
 			}

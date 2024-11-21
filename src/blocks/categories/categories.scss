@@ -84,7 +84,7 @@
 			right: 0px;
 		}
 
-		&.disabled {
+		&[disabled] {
 			border-color: transparent;
 
 			&::before {

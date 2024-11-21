@@ -23,7 +23,8 @@
 		height: 3px;
 
 		span {
-			background-color: #888;
+			// background-color: #888;
+			background-color: rgba(var(--accent), 0.5);
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -120,14 +121,6 @@
 		
 		&_next {
 			right: -15px;
-		}
-
-		&.disabled {
-			background-color: #ccc;
-
-			&::before {
-				filter: grayscale(10) brightness(10);
-			}
 		}
 
 		&.s-button {
