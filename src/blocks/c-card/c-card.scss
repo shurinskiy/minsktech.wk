@@ -1,0 +1,251 @@
+.c-card {
+	$self: &;
+	display: grid;
+	grid-template-columns: 170px 1.3fr minmax(300px, 0.7fr);
+	grid-gap: 20px;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	padding: 20px 30px 20px 20px;
+	
+	@include media('<=md') {
+		align-items: stretch;
+		grid-template-columns: 190px auto;
+	}
+	
+	@include media('<=xs') {
+		grid-template-columns: 160px auto;
+	}
+	
+	@include media('<=xxs') {
+		grid-template-columns: 120px auto;
+	}
+
+	&__image {
+		position: relative;
+		text-decoration: none;
+		color: inherit;
+		margin-right: 10px;
+		grid-column: span 1;
+		align-self: start;
+		height: 100%;
+		position: relative;
+		
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+		
+		@include media('<=md') {
+			grid-row: span 2;
+		}
+		
+		@include media('<=xs') {
+			grid-row: span 1;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0;
+		}
+
+		img {
+			object-fit: cover;
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-position: top;
+		}
+
+		/* &[data-discount]::before {
+			display: block;
+			content: attr(data-discount);
+			background-color: rgb(var(--accent));
+			color: #fff;
+			text-transform: uppercase;
+			padding: 4px 7px 5px;
+			font-weight: 700;
+			font-size: 9px;
+			line-height: 1.0;
+			border-radius: 2px;
+			position: absolute;
+			z-index: 1;
+			left: 5px;
+			top: 5px;
+			
+			@include media('<=xxs') {
+				padding: 4px 5px 3px;
+			}
+		} */
+	}
+
+	&__mid {
+		display: grid;
+		grid-template-columns: minmax(240px, 1fr) minmax(auto, 150px);
+		align-items: center;
+		grid-gap: 20px;
+		grid-column: span 1;
+		height: 100%;
+		
+		@include media('<=md') {
+			grid-template-columns: auto;
+		}
+	}
+	
+	&__info {
+		grid-column: span 1;
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 10px;
+		justify-content: space-between;
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+
+		h2 {
+			font-weight: 600;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	&__price {
+		white-space: nowrap;
+		grid-column: span 1;
+		
+		@include media('<=xxxs') {
+			font-size: 15px;
+		}
+
+		p {
+			margin-bottom: 10px;
+			font-weight: 600;
+		
+			@include media('<=xxxs') {
+				margin: 0;
+			}
+				
+			&:last-child {
+				margin: 0;
+				color: #bbb;
+				text-decoration: line-through;
+			}
+		}
+		
+		span {
+			color: #bbb;
+			font-size: 18px;
+			font-weight: 300;
+		}
+	}
+
+	&__end {
+		display: grid;
+		grid-template-columns: 150px 1fr 50px;
+		grid-gap: 10px;
+		grid-auto-rows: 50px;
+		grid-column: span 1;
+		
+		@include media('<=md') {
+			margin-top: auto;
+			justify-content: start;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(2, auto) 1fr;
+			grid-column: span 2;
+			justify-content: stretch;
+			grid-gap: 30px;
+		}
+		
+		@include media('<=xxs') {
+			grid-auto-rows: 40px;
+			grid-gap: 20px;
+		}
+	}
+	
+	&__control {
+		display: grid;
+		grid-template-columns: repeat(3, 50px);
+		justify-content: center;
+		height: 100%;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-right: auto;
+
+		@include media('<=xxs') {
+			grid-template-columns: repeat(3, 40px);
+		}
+
+		input, button {
+			@extend %reset-button;
+			width: 100%;
+			text-align: center;
+			background-color: #fafafa;
+			font-family: "CR", sans-serif;
+			line-height: 1;
+		}
+		
+		button {
+			background-color: #dfdfdf;
+			// background-color: rgb(var(--accent));
+			color: #111;
+			font-size: 22px;
+		}
+	}
+	
+	&__total {
+		font-weight: 600;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media('<=xxxs') {
+			font-size: 15px;
+		}
+	}
+
+	&__delete {
+		@extend %reset-button;
+		width: 50px;
+		height: 100%;
+		// background-color: rgb(var(--accent));
+		background-color: #e75151;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		border-radius: 5px;
+		
+		@include media('<=xs') {
+			margin-left: auto;
+		}
+		
+		@include media('<=xxs') {
+			width: 40px;
+			background-size: 22px 22px;
+		}
+		
+		@include media('<=xxxs') {
+			// background-color: #e8e8e8;
+		}
+
+		svg {
+			fill: #fff;
+			width: 15px;
+			height: 15px;
+		}
+	}
+}

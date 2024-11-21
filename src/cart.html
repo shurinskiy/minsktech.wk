@@ -1,0 +1,103 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", {cls: 'mb2'}) 
+
+<main class="cart mb1">
+	<div class="cart__inner container">
+		<h1 class="cart__title title mb3">Корзина (<span>3</span>)</h1>
+		<div class="cart__items">
+			@@include("_c-card.html", {
+				cls: 'cart__item',
+				image: 'card-image-1.webp',
+				title: 'Холодильник с морозильником Beko CNMV5335E20VS',
+				cat: 'Холодильники',
+				price: '2310',
+				discount: '2900'
+			})
+			@@include("_c-card.html", {
+				cls: 'cart__item',
+				image: 'card-image-2.webp',
+				title: 'Стиральная машина ATLANT СМА 60У1214-01',
+				cat: 'Стиральные машины',
+				price: '2500',
+				discount: '3400'
+			})
+			@@include("_c-card.html", {
+				cls: 'cart__item',
+				image: 'card-image-3.webp',
+				title: 'Холодильник Haier C2F636CWRGU1',
+				cat: 'Холодильники',
+				price: '2200',
+				discount: '3150'
+			})
+
+		</div>
+
+		<div class="cart__total">
+			<div class="cart__value">
+				<span>Всего товаров</span>
+				<span>3 шт.</span>
+			</div>
+			<div class="cart__value">
+				<span>Стоимость</span>
+				<span>10500 р.</span>
+			</div>
+			<a class="cart__button button" href="./">Оформить заказ</a>
+		</div>
+	</div>
+</main>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Похожие товары</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кофемашина HD8654/59',
+						image: 'card-image-1.webp',
+						discount: '1800р.',
+						price: '1200р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн K6552',
+						image: 'card-image-2.webp',
+						discount: '1000р.',
+						price: '1300р.',
+						fav_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Компьютер офисный II X2 270',
+						image: 'card-image-3.webp',
+						discount: '900р.',
+						price: '1100р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн B52452',
+						image: 'card-image-4.webp',
+						discount: '1100р.',
+						price: '1300р.',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'ROR-C11-2200M',
+						image: 'card-image-5.webp',
+						discount: '1400р.',
+						price: '1700р.',
+					})
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev"></button>
+				<button class="slider__button slider__button_next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

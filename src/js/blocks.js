@@ -9,3 +9,4 @@ import "../blocks/rating/rating.js";
 import "../blocks/filter/filter.js";
 import "../blocks/select/select.js";
 import "../blocks/hero/hero.js";
+import "../blocks/c-card/c-card.js";
