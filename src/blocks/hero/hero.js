@@ -16,7 +16,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 		navigation: {
 			prevEl: `.hero__button_prev`,
 			nextEl: `.hero__button_next`,
-			disabledClass: 'disabled'
+			disabledClass: 'disabled',
+			lockClass: 'hidden'
 		}
 	});
 	

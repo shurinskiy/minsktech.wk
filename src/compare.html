@@ -1,0 +1,182 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", { cls: 'mb2' }) 
+
+<main class="compare mb1">
+	<div class="compare__inner container">
+		<h1 class="compare__title title mb3">Сравнение товаров</h1>
+		<div class="compare__items mb2">
+			<div class="compare__slider swiper">
+				<div class="compare__wrapper swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'compare__item swiper-slide',
+						image: 'card-image-1.webp',
+						title: 'Кофемашина HD8654/59',
+						price: '18000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'compare__item swiper-slide',
+						image: 'card-image-3.webp',
+						title: 'Компьютер офисный II X2 270',
+						price: '15000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'compare__item swiper-slide',
+						image: 'card-image-4.webp',
+						title: 'Кухонный комбайн B52452',
+						price: '30000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'compare__item swiper-slide',
+						image: 'card-image-5.webp',
+						title: 'ROR-C11-2200M',
+						price: '50000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'catalog__item',
+						image: 'card-image-2.webp',
+						title: 'Кухонный комбайн K6552',
+						price: '19000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'catalog__item',
+						image: 'card-image-7.webp',
+						title: 'Полочная акустика Rebel',
+						price: '18000',
+						compare_set: true
+					})
+				</div>
+			</div>
+			<button class="compare__button compare__button_prev s-button"></button>
+			<button class="compare__button compare__button_next s-button"></button>
+		</div>
+
+		<div class="compare__table table">
+			<div class="table__pagination"></div>
+			<div class="table__wrapper">
+				<div class="table__header">
+					<div class="table__head">Название:</div>
+					<div class="table__value">Год выхода:</div>
+					<div class="table__value">Тип мотора:</div>
+					<div class="table__value">Вес ызагрузки:</div>
+					<div class="table__value">Дисплей:</div>
+					<div class="table__value">Цвет:</div>
+				</div>
+				<div class="table__items swiper">
+					<div class="swiper-wrapper">
+						<div class="table__item swiper-slide">
+							<div class="table__head">Atlant</div>
+							<div class="table__value">2021</div>
+							<div class="table__value">Коллекторный</div>
+							<div class="table__value">6 кг.</div>
+							<div class="table__value">Сенсорный</div>
+							<div class="table__value">Белый</div>
+						</div>
+						<div class="table__item swiper-slide">
+							<div class="table__head">Atlant</div>
+							<div class="table__value">2020</div>
+							<div class="table__value">Коллекторный</div>
+							<div class="table__value">8 кг.</div>
+							<div class="table__value">Сенсорный</div>
+							<div class="table__value">Серый</div>
+						</div>
+						<div class="table__item swiper-slide">
+							<div class="table__head">Atlant</div>
+							<div class="table__value">2024</div>
+							<div class="table__value">Инверторный</div>
+							<div class="table__value">7 кг.</div>
+							<div class="table__value">Дисплейный</div>
+							<div class="table__value">Белый</div>
+						</div>
+						<div class="table__item swiper-slide">
+							<div class="table__head">Haier</div>
+							<div class="table__value">2023</div>
+							<div class="table__value">Инверторный</div>
+							<div class="table__value">10 кг.</div>
+							<div class="table__value">Сенсорный</div>
+							<div class="table__value">Стальной</div>
+						</div>
+						<div class="table__item swiper-slide">
+							<div class="table__head">Haier</div>
+							<div class="table__value">2024</div>
+							<div class="table__value">Инверторный</div>
+							<div class="table__value">8 кг.</div>
+							<div class="table__value">Сенсорный</div>
+							<div class="table__value">Белый</div>
+						</div>
+						<div class="table__item swiper-slide">
+							<div class="table__head">LG</div>
+							<div class="table__value">2022</div>
+							<div class="table__value">Коллекторный</div>
+							<div class="table__value">6 кг.</div>
+							<div class="table__value">Дисплейный</div>
+							<div class="table__value">Белый</div>
+						</div>
+					</div>
+				</div>
+				<button class="table__button table__button_prev s-button"></button>
+				<button class="table__button table__button_next s-button"></button>
+			</div>
+		</div>
+	</div>
+</main>
+
+<section class="slider mb1">
+	<div class="slider__inner container">
+		<h2 class="slider__title title title_main mb2">Похожие товары</h2>
+		<div class="slider__wrapper">
+			<div class="slider__items swiper">
+				<div class="swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кофемашина HD8654/59',
+						image: 'card-image-1.webp',
+						discount: '1800р.',
+						price: '1200р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн K6552',
+						image: 'card-image-2.webp',
+						discount: '1000р.',
+						price: '1300р.',
+						fav_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Компьютер офисный II X2 270',
+						image: 'card-image-3.webp',
+						discount: '900р.',
+						price: '1100р.',
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'Кухонный комбайн B52452',
+						image: 'card-image-4.webp',
+						discount: '1100р.',
+						price: '1300р.',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'slider__item swiper-slide',
+						title: 'ROR-C11-2200M',
+						image: 'card-image-5.webp',
+						discount: '1400р.',
+						price: '1700р.',
+					})
+				</div>
+			</div>
+			<div class="slider__navi">
+				<button class="slider__button slider__button_prev s-button"></button>
+				<button class="slider__button slider__button_next s-button"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

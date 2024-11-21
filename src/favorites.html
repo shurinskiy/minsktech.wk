@@ -4,10 +4,7 @@
 
 <main class="catalog mb1">
 	<div class="catalog__inner container">
-		<div class="catalog__top mb3">
-			<h2 class="title">Фильтр по параметрам</h2>
-			<a class="catalog__add button button_dark" href="./add.html">Добавить товар</a>
-		</div>
+		<h1 class="catalog__title title mb3">Избранное (<span>6</span>)</h1>
 		<div class="catalog__content">
 			@@include('_catalog-aside.html')
 			<div class="catalog__items">
@@ -16,61 +13,45 @@
 					image: 'card-image-1.webp',
 					title: 'Кофемашина HD8654/59',
 					price: '18000',
-					fav_set: true,
-					compare_set: true
+					fav_set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					image: 'card-image-2.webp',
 					title: 'Кухонный комбайн K6552',
-					price: '19000'
+					price: '19000',
+					fav_set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					image: 'card-image-3.webp',
 					title: 'Компьютер офисный II X2 270',
-					price: '15000'
+					price: '15000',
+					fav_set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					image: 'card-image-4.webp',
 					title: 'Кухонный комбайн B52452',
 					price: '30000',
-					compare_set: true
+					fav_set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					image: 'card-image-5.webp',
 					title: 'ROR-C11-2200M',
 					price: '50000',
-					fav_set: true
+					fav_set: true,
+					compare_set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					image: 'card-image-6.webp',
 					title: 'Чайник электрический КТ-659-1',
-					price: '43000'
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					image: 'card-image-7.webp',
-					title: 'Полочная акустика Rebel',
-					price: '18000'
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					image: 'card-image-8.webp',
-					title: 'Посудомоечная машина CDCP 6/E-07',
-					price: '20000'
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					image: 'card-image-9.webp',
-					title: 'Мультиварка MT-1964',
-					price: '23000',
+					price: '43000',
+					fav_set: true,
 					compare_set: true
 				})
-				@@include('_pagination.html', { cls: 'catalog__pagination'})
 			</div>
 		</div>
 	</div>

@@ -11,6 +11,7 @@ import { Navigation } from 'swiper/modules';
 			navigation: {
 				nextEl: `.slider__navi_${i} .slider__button_next`,
 				prevEl: `.slider__navi_${i} .slider__button_prev`,
+				lockClass: 'hidden'
 			},
 			on: {
 				beforeInit: function(el) {

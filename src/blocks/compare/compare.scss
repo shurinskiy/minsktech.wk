@@ -1,0 +1,74 @@
+.compare {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+
+	}
+
+	&__items {
+		position: relative;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-content: start;
+		grid-gap: 30px;
+		
+		@include media('<=xlg') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=lg') {
+			display: flex;
+			grid-gap: 0;
+		}
+	}
+
+	&__slider {
+
+	}
+
+	&__item {
+		grid-column: span 1;
+		height: auto;
+	}
+
+	&__button {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&_prev {
+			left: -15px;
+
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+		
+		&_next {
+			right: -15px;
+		}
+
+		&.s-button {
+				
+			@include media('>lg') {
+				display: none;
+			}
+
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
+	}
+
+	&__table {
+
+	}
+}

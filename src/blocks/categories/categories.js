@@ -10,7 +10,8 @@ import { Navigation, Mousewheel } from 'swiper/modules';
 		navigation: {
 			prevEl: `.categories__button_prev`,
 			nextEl: `.categories__button_next`,
-			disabledClass: 'disabled'
+			disabledClass: 'disabled',
+			lockClass: 'hidden'
 		},
 		breakpoints: {
 			0: {

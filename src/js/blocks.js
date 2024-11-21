@@ -10,3 +10,5 @@ import "../blocks/filter/filter.js";
 import "../blocks/select/select.js";
 import "../blocks/hero/hero.js";
 import "../blocks/c-card/c-card.js";
+import "../blocks/compare/compare.js";
+import "../blocks/table/table.js";
