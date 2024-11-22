@@ -21,7 +21,7 @@
 					<a class="header__menu-link" href="./compare.html">Сравнение</a>
 					<a class="header__menu-link" href="./favorites.html">Избранное</a>
 					<a class="header__menu-link" href="./about.html">О компании</a>
-					<a class="header__menu-link" href="./contacts.html">Контакты</a>
+					<a class="header__menu-link" href="./account.html">Аккаунт</a>
 					<a class="header__menu-link header__menu-link_mobile" href="./account.html">Аккаунт</a>
 				</div>
 				<div class="header__menu-util">
@@ -31,9 +31,9 @@
 							<input type="submit" value="">
 						</div>
 					</form>
-					<a class="header__menu-user" href="./login.html"><svg><use xlink:href="#icon-user"></use></svg></a>
-					<a class="header__menu-cart" href="./cart.html" data-count="2"><svg><use xlink:href="#icon-cart"></use></svg></a>
+					<a class="header__menu-user" href="./account.html"><svg><use xlink:href="#icon-user"></use></svg></a>
 					<!-- <a class="header__menu-exit" href="./"><svg><use xlink:href="#icon-exit"></use></svg></a> -->
+					<a class="header__menu-cart" href="./cart.html" data-count="3"><svg><use xlink:href="#icon-cart"></use></svg></a>
 				</div>
 			</div>
 		</div>
@@ -59,15 +59,15 @@
 		<button class="categories__button categories__button_next"></button>
 	</div>
 </div>
- 
+
 
 <main class="compare mb1">
 	<div class="compare__inner container">
 		<h1 class="compare__title title mb3">Сравнение товаров (<span>6</span>)</h1>
-		<div class="compare__items mb2">
-			<div class="compare__slider swiper">
-				<div class="compare__wrapper swiper-wrapper">
-					<div class="compare__item swiper-slide card">
+		<div class="compare__items c-slider mb2">
+			<div class="c-slider__slider swiper">
+				<div class="c-slider__wrapper swiper-wrapper">
+					<div class="c-slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-1.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -82,7 +82,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-					<div class="compare__item swiper-slide card">
+					<div class="c-slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-3.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -97,7 +97,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-					<div class="compare__item swiper-slide card">
+					<div class="c-slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-4.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -112,7 +112,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-					<div class="compare__item swiper-slide card">
+					<div class="c-slider__item swiper-slide card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-5.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -127,7 +127,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-					<div class="catalog__item card">
+					<div class="c-slider__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-2.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -142,7 +142,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-					<div class="catalog__item card">
+					<div class="c-slider__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-7.webp" alt="">
 		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -159,8 +159,10 @@
 </div>
 				</div>
 			</div>
-			<button class="compare__button compare__button_prev s-button"></button>
-			<button class="compare__button compare__button_next s-button"></button>
+			<div class="c-slider__navi">
+				<button class="c-slider__button c-slider__button_prev s-button"></button>
+				<button class="c-slider__button c-slider__button_next s-button"></button>
+			</div>
 		</div>
 
 		<div class="compare__table table">

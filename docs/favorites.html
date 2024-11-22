@@ -21,7 +21,7 @@
 					<a class="header__menu-link" href="./compare.html">Сравнение</a>
 					<a class="header__menu-link" href="./favorites.html">Избранное</a>
 					<a class="header__menu-link" href="./about.html">О компании</a>
-					<a class="header__menu-link" href="./contacts.html">Контакты</a>
+					<a class="header__menu-link" href="./account.html">Аккаунт</a>
 					<a class="header__menu-link header__menu-link_mobile" href="./account.html">Аккаунт</a>
 				</div>
 				<div class="header__menu-util">
@@ -31,9 +31,9 @@
 							<input type="submit" value="">
 						</div>
 					</form>
-					<a class="header__menu-user" href="./login.html"><svg><use xlink:href="#icon-user"></use></svg></a>
-					<a class="header__menu-cart" href="./cart.html" data-count="2"><svg><use xlink:href="#icon-cart"></use></svg></a>
+					<a class="header__menu-user" href="./account.html"><svg><use xlink:href="#icon-user"></use></svg></a>
 					<!-- <a class="header__menu-exit" href="./"><svg><use xlink:href="#icon-exit"></use></svg></a> -->
+					<a class="header__menu-cart" href="./cart.html" data-count="3"><svg><use xlink:href="#icon-cart"></use></svg></a>
 				</div>
 			</div>
 		</div>
@@ -61,108 +61,11 @@
 </div>
  
 
-<main class="catalog mb1">
-	<div class="catalog__inner container">
-		<h1 class="catalog__title title mb3">Избранное (<span>6</span>)</h1>
-		<div class="catalog__content">
-			<aside class="catalog__aside">
-	<button class="catalog__aside-toggle"></button>
-	<button class="catalog__aside-close"><svg><use xlink:href="#icon-close"></use></svg></button>
-	<form class="catalog__filters" action="./" data-scroll-lock-scrollable>
-		<div class="catalog__filter filter" id="filter-price">
-			<h3 class="filter__title">Цена</h3>
-			<fieldset class="filter__body">
-				<div 
-					class="filter__range" 
-					data-range-start-min="20000" 
-					data-range-start-max="80000" 
-					data-range-max="100000"
-					data-range-step="1000"
-					data-range-gap="20000"
-				>
-					<input type="range">
-					<input type="range">
-				</div>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-brand">
-			<h3 class="filter__title">Бренд</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Atlant</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>LG</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Gefest</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-deep">
-			<h3 class="filter__title">Глубина, см</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>30-40</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>40-50</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>50+</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-speed">
-			<h3 class="filter__title">Скорость (до)</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>800</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1000</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1100</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1200</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>1300</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-fuel">
-			<h3 class="filter__title">Тип топлива</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Бензин</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Дизель</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Гибрид</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Электро</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-country">
-			<h3 class="filter__title">Страна</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Германия</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Франция</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Китай</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Россия</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>Беларусь</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-width">
-			<h3 class="filter__title">Ширина, см</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>40-45</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>45-50</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>55-60</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>60-65</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>65-70</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-year">
-			<h3 class="filter__title">Год выхода</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2024</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2023</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2022</span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span>2021</span></label>
-			</fieldset>
-		</div>
-		<div class="catalog__filter filter" id="filter-color">
-			<h3 class="filter__title">Цвет</h3>
-			<fieldset class="filter__body">
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-				<label class="filter__checkbox"><input type="checkbox" value=""><span></span></label>
-			</fieldset>
-		</div>
-		<button class="catalog__apply button">Применить</button>
-	</form>
-</aside>
-			<div class="catalog__items">
-				<div class="catalog__item card">
+<main class="favorites mb1">
+	<div class="favorites__inner container">
+		<h1 class="favorites__title title mb3">Избранное (<span>8</span>)</h1>
+		<div class="favorites__items mb3">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-1.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -177,7 +80,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-2.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -192,7 +95,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-3.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -207,7 +110,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-4.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -222,7 +125,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-5.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -237,7 +140,7 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-				<div class="catalog__item card">
+			<div class="favorites__item card">
 	<a class="card__image" href="./detail.html">
 		<img src="./images/card-image-6.webp" alt="">
 		<button class="card__fav card__fav_set"><svg><use xlink:href="#icon-heart"></use></svg></button>
@@ -252,10 +155,46 @@
 		<a class="card__button" href="./cart.html">В корзину</a>
 	</div>
 </div>
-			</div>
+			<div class="favorites__item card">
+	<a class="card__image" href="./detail.html">
+		<img src="./images/card-image-7.webp" alt="">
+		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
+		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
+	</a>
+	<div class="card__body">
+		<div class="card__price">
+			<span>18000</span>
+			
 		</div>
+		<div class="card__title">Полочная акустика Rebel</div>
+		<a class="card__button" href="./cart.html">В корзину</a>
+	</div>
+</div>
+			<div class="favorites__item card">
+	<a class="card__image" href="./detail.html">
+		<img src="./images/card-image-8.webp" alt="">
+		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
+		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
+	</a>
+	<div class="card__body">
+		<div class="card__price">
+			<span>20000</span>
+			
+		</div>
+		<div class="card__title">Посудомоечная машина CDCP 6/E-07</div>
+		<a class="card__button" href="./cart.html">В корзину</a>
+	</div>
+</div>
+		</div>
+		<div class="favorites__pagination pagination">
+	<a class="pagination__link active" href="./">1</a>
+	<a class="pagination__link" href="./">2</a>
+	<a class="pagination__link" href="./">3</a>
+	<a class="pagination__link" href="./">4</a>
+</div>
 	</div>
 </main>
+
 <footer class="footer"> 
 	<div class="footer__inner container">
 		<a class="footer__logo" href="./"><img src="./images/logo.svg" alt=""></a>

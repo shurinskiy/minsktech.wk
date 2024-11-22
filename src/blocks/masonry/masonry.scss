@@ -1,0 +1,59 @@
+.masonry {
+	$self: &;
+	position: relative;
+	overflow: hidden;
+	column-count: 4;
+	column-gap: 10px;
+	column-width: 300px;
+	@keyframes cardZoomIn {
+		from { opacity: 0; transform: scale(0) translateZ(0); }
+		to { opacity: 1; transform: scale(1) translateZ(0); }
+	}
+	
+	@include media('<=lg') {
+		column-count: 3;
+	}
+	
+	@include media('<=xs') {
+		column-count: 2;
+	}
+	
+	@include media('<=xxxs') {
+		height: auto !important;
+	}
+
+	&_builded #{$self}__image img {
+		animation: cardZoomIn 0.4s ;
+		animation-fill-mode: forwards;
+		animation-delay: 0.15s;
+	}
+	
+	&__image {
+		overflow: hidden;
+		margin-bottom: 10px;
+		cursor: pointer;
+		border-radius: 6px;
+		
+		@include media('<=xxxs') {
+			position: static !important;
+			width: 100% !important;
+			height: auto !important;
+		}
+		
+		&:hover img {
+			filter: saturate(1);
+		}
+
+		img {
+			display: block;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			backface-visibility: hidden;
+			transform: translateZ(0);
+			filter: saturate(0.5);
+			transition: filter 0.3s;
+		}
+	}
+}

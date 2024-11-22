@@ -1,0 +1,78 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", { cls: 'mb2' }) 
+
+<main class="account">
+	<div class="account__inner container">
+		<h1 class="account__title title mb3">Личный кабинет</h1>
+		<div class="account__body mb3">
+			<div class="account__data">
+				<h2 class="account__subtitle">Личные данные:</h2>
+				<div class="account__data-item"><span>Имя:</span> Юлия В</div>
+				<div class="account__data-item"><span>Телефон:</span> +375 29 809 43 25</div>
+				<div class="account__data-item"><span>Email:</span> yulya@gmail.com</div>
+			</div>
+			<div class="account__data">
+				<h2 class="account__subtitle">Адрес доставки:</h2>
+				<div class="account__data-item"><span>город:</span> г. Минск</div>
+				<div class="account__data-item"><span>адрес: </span>Ул. м.Богдановича 45</div>
+			</div>
+		</div>
+
+		<h2 class="title title_main mb3">История заказов</h2>
+		<div class="account__history c-slider mb2">
+			<div class="c-slider__slider swiper">
+				<div class="c-slider__wrapper swiper-wrapper">
+					@@include('_card.html', {
+						cls: 'c-slider__item swiper-slide',
+						image: 'card-image-1.webp',
+						title: 'Кофемашина HD8654/59',
+						price: '18000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'c-slider__item swiper-slide',
+						image: 'card-image-3.webp',
+						title: 'Компьютер офисный II X2 270',
+						price: '15000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'c-slider__item swiper-slide',
+						image: 'card-image-4.webp',
+						title: 'Кухонный комбайн B52452',
+						price: '30000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'c-slider__item swiper-slide',
+						image: 'card-image-5.webp',
+						title: 'ROR-C11-2200M',
+						price: '50000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'c-slider__item',
+						image: 'card-image-2.webp',
+						title: 'Кухонный комбайн K6552',
+						price: '19000',
+						compare_set: true
+					})
+					@@include('_card.html', {
+						cls: 'c-slider__item',
+						image: 'card-image-7.webp',
+						title: 'Полочная акустика Rebel',
+						price: '18000',
+						compare_set: true
+					})
+				</div>
+			</div>
+			<div class="c-slider__navi">
+				<button class="c-slider__button c-slider__button_prev s-button"></button>
+				<button class="c-slider__button c-slider__button_next s-button"></button>
+			</div>
+		</div>
+	</div>
+</main>
+
+@@include("_bottom.html")

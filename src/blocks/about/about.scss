@@ -1,0 +1,48 @@
+.about {
+	$self: &;
+
+	&__inner {
+		box-sizing: border-box;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+		background-color: #fff;
+		border-radius: 10px;
+		padding: 30px;
+		
+		@include media('<=lg') {
+			padding: 20px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	&__article {
+
+	}
+
+	&__text {
+		font-size: 18px;
+		
+		@include media('<=lg') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 15px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+
+		a {
+			color: rgba(var(--accent));
+		}
+	}
+
+	&__gallery {
+
+	}
+}
