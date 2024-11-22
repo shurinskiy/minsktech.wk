@@ -61,128 +61,52 @@
 </div>
  
 
-<main class="account">
-	<div class="account__inner container">
-		<h1 class="account__title title mb3">Личный кабинет</h1>
-		<div class="account__body mb3">
-			<div class="account__data">
-				<h2 class="account__subtitle">Личные данные:</h2>
-				<div class="account__data-item"><span>Имя:</span> Юлия В</div>
-				<div class="account__data-item"><span>Телефон:</span> +375 29 809 43 25</div>
-				<div class="account__data-item"><span>Email:</span> yulya@gmail.com</div>
-				<div class="account__data-item"><span>Персональная скидка:</span> 15%</div>
-			</div>
-			<div class="account__data">
-				<h2 class="account__subtitle">Адрес доставки:</h2>
-				<div class="account__data-item"><span>город:</span> г. Минск</div>
-				<div class="account__data-item"><span>адрес: </span>Ул. м.Богдановича 45</div>
-			</div>
-		</div>
-
-		<h2 class="title title_main mb3">История заказов</h2>
-		<div class="account__history c-slider mb2">
-			<div class="c-slider__slider swiper">
-				<div class="c-slider__wrapper swiper-wrapper">
-					<div class="c-slider__item swiper-slide card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-1.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>18000</span>
-			
-		</div>
-		<div class="card__title">Кофемашина HD8654/59</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
-					<div class="c-slider__item swiper-slide card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-3.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>15000</span>
-			
-		</div>
-		<div class="card__title">Компьютер офисный II X2 270</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
-					<div class="c-slider__item swiper-slide card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-4.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>30000</span>
-			
-		</div>
-		<div class="card__title">Кухонный комбайн B52452</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
-					<div class="c-slider__item swiper-slide card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-5.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>50000</span>
-			
-		</div>
-		<div class="card__title">ROR-C11-2200M</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
-					<div class="c-slider__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-2.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>19000</span>
-			
-		</div>
-		<div class="card__title">Кухонный комбайн K6552</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
-					<div class="c-slider__item card">
-	<a class="card__image" href="./detail.html">
-		<img src="./images/card-image-7.webp" alt="">
-		<button class="card__fav "><svg><use xlink:href="#icon-heart"></use></svg></button>
-		<button class="card__compare card__compare_set"><svg><use xlink:href="#icon-match"></use></svg></button>
-	</a>
-	<div class="card__body">
-		<div class="card__price">
-			<span>18000</span>
-			
-		</div>
-		<div class="card__title">Полочная акустика Rebel</div>
-		<a class="card__button" href="./cart.html">В корзину</a>
-	</div>
-</div>
+<main class="order mb1">
+	<div class="order__inner container">
+		<h1 class="order__title title mb3">Оформление заказа</h1>
+		<form action="./" class="order__form">
+			<div class="order__fields mb3">
+				<div class="order__field field">
+					<label class="field__title">Имя</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Email</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Страна</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Город</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Улица</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Полный адрес доставки</label>
+					<input class="field__box field__box_text" type="text">
 				</div>
 			</div>
-			<div class="c-slider__navi">
-				<button class="c-slider__button c-slider__button_prev s-button"></button>
-				<button class="c-slider__button c-slider__button_next s-button"></button>
+			<div class="order__bottom">
+				<div class="order__resume">
+					<div class="order__sum">Общая сумма: <span>10500 р.</span></div>
+					<div class="order__sum">Доставка: <span>15%</span></div>
+					<div class="order__sum">Скидка: <span>0</span></div>
+					<div class="order__total">Итого: <span>12000 р.</span></div>
+					<label class="order__agree chbox">
+						<input type="checkbox">
+						<span>I agree with policy private</span>
+					</label>
+				</div>
+				<button class="order__submit button">Оставить заказ</button>
 			</div>
-		</div>
+		</form>
 	</div>
 </main>
-
 <footer class="footer"> 
 	<div class="footer__inner container">
 		<a class="footer__logo" href="./"><img src="./images/logo.svg" alt=""></a>

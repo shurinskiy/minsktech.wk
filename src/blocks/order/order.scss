@@ -1,0 +1,110 @@
+.order {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+
+	}
+
+	&__form {
+
+	}
+
+	&__fields {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px 30px;
+		
+		@include media('<=sm') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__field {
+		grid-column: span 1;
+	}
+
+	&__bottom {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+		
+		@include media('<=sm') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=xs') {
+			grid-gap: 40px;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__resume {
+
+	}
+	
+	&__sum {
+		font-size: 20px;
+		padding: 5px 0;
+		color: #888;
+		
+		@include media('<=xs') {
+			font-size: 18px;
+		}
+		
+		span {
+			color: #111;
+		}
+	}
+	
+	&__total {
+		font-size: 30px;
+		margin: 20px 0;
+		padding-top: 20px;
+		position: relative;
+		color: #888;
+		
+		@include media('<=xs') {
+			font-size: 26px;
+		}
+		
+		&::before {
+			display: block;
+			content: '';
+			height: 1px;
+			background-color: rgb(var(--accent));
+			width: 100%;
+			max-width: 350px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		span {
+			color: #111;
+			font-weight: 700;
+		}
+	}
+
+	&__agree {
+
+	}
+
+	&__submit {
+		height: 60px;
+		font-size: 22px;
+		// margin-left: auto;
+		align-self: center;
+		
+		@include media('<=xs') {
+			font-size: 20px;
+		}
+	}
+}

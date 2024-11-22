@@ -1,0 +1,51 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+@@include("_categories.html", { cls: 'mb2' }) 
+
+<main class="order mb1">
+	<div class="order__inner container">
+		<h1 class="order__title title mb3">Оформление заказа</h1>
+		<form action="./" class="order__form">
+			<div class="order__fields mb3">
+				<div class="order__field field">
+					<label class="field__title">Имя</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Email</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Страна</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Город</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Улица</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="order__field field">
+					<label class="field__title">Полный адрес доставки</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+			</div>
+			<div class="order__bottom">
+				<div class="order__resume">
+					<div class="order__sum">Общая сумма: <span>10500 р.</span></div>
+					<div class="order__sum">Доставка: <span>15%</span></div>
+					<div class="order__sum">Скидка: <span>0</span></div>
+					<div class="order__total">Итого: <span>12000 р.</span></div>
+					<label class="order__agree chbox">
+						<input type="checkbox">
+						<span>I agree with policy private</span>
+					</label>
+				</div>
+				<button class="order__submit button">Оставить заказ</button>
+			</div>
+		</form>
+	</div>
+</main>
+@@include("_bottom.html")
