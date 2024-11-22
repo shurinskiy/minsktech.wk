@@ -20,9 +20,8 @@
 					<a class="header__menu-link header__menu-link_mobile" href="./cart.html">Корзина (<span>2</span>)</a>
 					<a class="header__menu-link" href="./compare.html">Сравнение</a>
 					<a class="header__menu-link" href="./favorites.html">Избранное</a>
-					<a class="header__menu-link" href="./about.html">О компании</a>
 					<a class="header__menu-link" href="./account.html">Аккаунт</a>
-					<a class="header__menu-link header__menu-link_mobile" href="./account.html">Аккаунт</a>
+					<a class="header__menu-link" href="./about.html">О компании</a>
 				</div>
 				<div class="header__menu-util">
 					<form action="./" class="header__menu-search search">
@@ -31,7 +30,7 @@
 							<input type="submit" value="">
 						</div>
 					</form>
-					<a class="header__menu-user" href="./account.html"><svg><use xlink:href="#icon-user"></use></svg></a>
+					<a class="header__menu-user" href="./login.html"><svg><use xlink:href="#icon-user"></use></svg></a>
 					<!-- <a class="header__menu-exit" href="./"><svg><use xlink:href="#icon-exit"></use></svg></a> -->
 					<a class="header__menu-cart" href="./cart.html" data-count="3"><svg><use xlink:href="#icon-cart"></use></svg></a>
 				</div>
@@ -40,7 +39,7 @@
 		<button class="header__toggle"><svg><use xlink:href="#icon-menu"></use></svg></button>
 	</div>
 </header> 
-<div class="categories mb2">
+<div class="categories mb3">
 	<div class="categories__inner container">
 		<div class="categories__slider swiper">
 			<div class="swiper-wrapper">
@@ -63,7 +62,13 @@
 
 <main class="account">
 	<div class="account__inner container">
-		<h1 class="account__title title mb3">Личный кабинет</h1>
+		<div class="account__top">
+			<h1 class="account__title title">Личный кабинет</h1>
+			<button class="account__exit button">
+				<span>Выйти</span>
+				<svg><use xlink:href="#icon-exit"></use></svg>
+			</button>
+		</div>
 		<div class="account__body mb3">
 			<div class="account__data">
 				<h2 class="account__subtitle">Личные данные:</h2>
@@ -71,6 +76,7 @@
 				<div class="account__data-item"><span>Телефон:</span> +375 29 809 43 25</div>
 				<div class="account__data-item"><span>Email:</span> yulya@gmail.com</div>
 				<div class="account__data-item"><span>Персональная скидка:</span> 15%</div>
+				<div class="account__data-item"><span>Статус:</span> активный пользователь</div>
 			</div>
 			<div class="account__data">
 				<h2 class="account__subtitle">Адрес доставки:</h2>

@@ -12,4 +12,10 @@
 	border-radius: 5px;
 	min-height: 40px;
 	font-family: inherit;
+
+	svg {
+		display: block;
+		fill: #fff;
+		margin-left: 15px;
+	}
 }

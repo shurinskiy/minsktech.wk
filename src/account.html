@@ -1,10 +1,16 @@
 @@include("_head.html", {"id":"home"}) 
 @@include("_header.html") 
-@@include("_categories.html", { cls: 'mb2' }) 
+@@include("_categories.html", { cls: 'mb3' }) 
 
 <main class="account">
 	<div class="account__inner container">
-		<h1 class="account__title title mb3">Личный кабинет</h1>
+		<div class="account__top">
+			<h1 class="account__title title">Личный кабинет</h1>
+			<button class="account__exit button">
+				<span>Выйти</span>
+				<svg><use xlink:href="#icon-exit"></use></svg>
+			</button>
+		</div>
 		<div class="account__body mb3">
 			<div class="account__data">
 				<h2 class="account__subtitle">Личные данные:</h2>
@@ -12,6 +18,7 @@
 				<div class="account__data-item"><span>Телефон:</span> +375 29 809 43 25</div>
 				<div class="account__data-item"><span>Email:</span> yulya@gmail.com</div>
 				<div class="account__data-item"><span>Персональная скидка:</span> 15%</div>
+				<div class="account__data-item"><span>Статус:</span> активный пользователь</div>
 			</div>
 			<div class="account__data">
 				<h2 class="account__subtitle">Адрес доставки:</h2>

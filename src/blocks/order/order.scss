@@ -66,8 +66,8 @@
 	
 	&__total {
 		font-size: 30px;
-		margin: 20px 0;
-		padding-top: 20px;
+		margin: 30px 0 20px;
+		padding-top: 30px;
 		position: relative;
 		color: #888;
 		
@@ -98,7 +98,7 @@
 	}
 
 	&__submit {
-		height: 60px;
+		min-height: 60px;
 		font-size: 22px;
 		// margin-left: auto;
 		align-self: center;
