@@ -53,8 +53,10 @@
 			grid-row: auto;
 		}
 	}
-	
-	&__submit {
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
 		grid-row: 2 / span 1;
 		order: 2;
 		
@@ -62,6 +64,20 @@
 			grid-column: span 1;
 			grid-row: auto;
 			order: 3;
+		}
+
+		@include media('<=xxs') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__submit {
+
+		&_remove {
+			
+			&.button {
+				background-color: #DE0A30;
+			}
 		}
 		
 		&.button {
