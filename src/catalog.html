@@ -6,7 +6,20 @@
 	<div class="catalog__inner container">
 		<div class="catalog__top mb3">
 			<h2 class="title">Фильтр по параметрам</h2>
-			<a class="catalog__add button button_dark" href="./add.html">Добавить товар</a>
+			<select class="catalog__cats">
+				<option value="1">Телефоны и гаджеты</option>
+				<option value="2">Стиральные машины</option>
+				<option value="3">Микроволновые печи</option>
+				<option value="4">Кофемашины</option>
+				<option value="5">Телевизоры</option>
+				<option value="6">Холодильники</option>
+				<option value="7">Проекторы</option>
+				<option value="8">Пылесосы</option>
+				<option value="9">Компьютеры</option>
+			</select>
+			<a class="catalog__add button button_dark" href="./add.html">
+				<svg><use xlink:href="#icon-plus"></use></svg>
+			</a>
 		</div>
 		<div class="catalog__content">
 			@@include('_catalog-aside.html')

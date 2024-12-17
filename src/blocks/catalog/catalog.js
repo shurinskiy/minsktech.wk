@@ -1,13 +1,18 @@
 import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
+import { selectTweaker } from "../../js/libs/selectTweaker";
 import { stickySidebar } from "../../js/libs/stickySidebar";
 
 (() => {
 	const aside = document.querySelector('.catalog__aside');
 	if(!aside) return;
 	
-	
 	const toggles = document.querySelectorAll('button.catalog__aside-toggle, button.catalog__aside-close');
+	const selects = document.querySelectorAll('select.catalog__cats');
+	
+	selectTweaker(selects, {
+		select: function () { this.querySelector('.select__head').classList.add('selected') }
+	});
 	
 	const sidebar = menuToggle(aside, toggles, {
 		omitToClose: '.modal',
