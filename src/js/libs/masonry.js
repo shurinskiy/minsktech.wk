@@ -138,22 +138,45 @@ export const masonryBuilder = (element, options = {}) => {
 			if (flag) {
 				this.childrenData = [...this.childrenNodes].map((childNode) => {
 					let img = childNode.querySelector('img');
-	
-					return (img) ? { 
-						childNode, 
-						origWidth: img.naturalWidth,
-						ratio: img.naturalHeight / img.naturalWidth
-					} : {};
+		
+					if (img) {
+						// Возвращаем обещание, которое выполняется после загрузки изображения
+						return new Promise((resolve) => {
+							if (img.complete) {
+								// Если изображение уже загружено
+								resolve({
+									childNode, 
+									origWidth: img.naturalWidth,
+									ratio: img.naturalHeight / img.naturalWidth
+								});
+							} else {
+								// Ожидаем загрузки
+								img.addEventListener('load', () => {
+									resolve({
+										childNode,
+										origWidth: img.naturalWidth,
+										ratio: img.naturalHeight / img.naturalWidth
+									});
+								});
+							}
+						});
+					} else {
+						return Promise.resolve({});
+					}
 				});
-
-				this.setLayout();
-				this.handler = this._throttle(this.setLayout.bind(this));
-				window.addEventListener('resize', this.handler);
+		
+				// Дождаться загрузки всех изображений
+				Promise.all(this.childrenData).then((data) => {
+					this.childrenData = data;
+					this.setLayout();
+					this.handler = this._throttle(this.setLayout.bind(this));
+					window.addEventListener('resize', this.handler);
+				});
 			} else {
 				window.removeEventListener('resize', this.handler);
 				setTimeout(() => {
 					[...this.childrenData].forEach((child) => child.childNode.removeAttribute('style'));
-				}, options.sensitivity);
+				}, this.options.sensitivity);
 			}
 		}
 	}

@@ -56,7 +56,7 @@
 	}
 
 	&__items {
-
+		margin-left: 0;
 	}
 
 	&__item {
@@ -64,6 +64,10 @@
 		display: flex;
 		flex-flow: column nowrap;
 		gap: 10px;
+
+		@include media('>xs') {
+			min-width: 220px;
+		}
 	}
 		
 	&__head {
